@@ -2222,7 +2222,7 @@ li {
   padding: 14px 16px;
   color: var(--color-white);
   transition: background .2s ease;
-  corner-shape: scoop;
+  /*corner-shape: scoop;*/
 }
 
 /* .tour-card-v2:hover .tour-card-v2__panel {
@@ -2821,7 +2821,7 @@ picture {
   height: 320px;
   text-decoration: none;
   border-radius: 21px;
-  corner-shape: scoop;
+  /*corner-shape: scoop;*/
   overflow: hidden;
 }
 
@@ -2845,7 +2845,7 @@ picture {
   z-index: 20;
   pointer-events: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  corner-shape: scoop;
+  /*corner-shape: scoop;*/
   border-radius: var(--radius-lg);
 }
 
