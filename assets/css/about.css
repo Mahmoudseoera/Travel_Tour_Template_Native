@@ -1826,7 +1826,7 @@
   color: var(--color-gray-700);
 } */
 
-.beyond-faq-controls {
+.BrandName-faq-controls {
   display: flex;
   margin-top: 15px;
   width: 100%;
@@ -1834,7 +1834,7 @@
   padding: 0 0.5rem;
 }
 
-.beyond-faq-toggle-btn {
+.BrandName-faq-toggle-btn {
   font-size: 14px;
   font-weight: 600;
   color: var(--color-accent-dark);
@@ -1845,13 +1845,13 @@
   background: transparent;
 }
 
-.beyond-faq-a p {
+.BrandName-faq-a p {
   font-size: .875rem;
   color: var(--text-body);
   line-height: 1.75;
 }
 
-.beyond-faq-cta-link {
+.BrandName-faq-cta-link {
   display: inline-flex;
   align-items: center;
   display: none;
@@ -1863,12 +1863,12 @@
   transition: color .2s, gap .2s;
 }
 
-.beyond-faq-cta-link svg {
+.BrandName-faq-cta-link svg {
   width: 18px;
   height: 18px;
 }
 
-.beyond-faq-cta-link:hover {
+.BrandName-faq-cta-link:hover {
   color: var(--color-accent);
   gap: .75rem;
 }

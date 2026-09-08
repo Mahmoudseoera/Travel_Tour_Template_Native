@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
-  const toggleBtn = document.querySelector(".beyond-faq-toggle-btn");
-  const ctaLink = document.querySelector(".beyond-faq-cta-link");
+  const toggleBtn = document.querySelector(".BrandName-faq-toggle-btn");
+  const ctaLink = document.querySelector(".BrandName-faq-cta-link");
 
   if (!faqItems.length || !ctaLink) return;
 
