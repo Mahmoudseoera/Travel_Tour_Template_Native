@@ -8,15 +8,15 @@
 }
 
 .topbar {
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .topbar__dropdown svg {
-    stroke: var(--color-primary);
+    stroke: var(--main-color);
 }
 
 .topbar__social svg {
-    stroke: var(--color-primary);
+    stroke: var(--main-color);
 }
 
 .topbar__social a {
@@ -33,7 +33,7 @@
     flex-direction: column;
     background: #f8f5ee;
     border: 1px solid rgba(8, 40, 68, .14);
-    border-left: 5px solid var(--color-accent);
+    border-left: 5px solid var(--accent-color);
     border-radius: 8px 22px 22px 8px;
     padding: 0;
     box-shadow: 0 12px 32px rgba(8, 40, 68, .1);
@@ -87,7 +87,7 @@
     border: 1px solid rgba(255, 255, 255, .48);
     border-radius: 999px;
     background: rgba(8, 40, 68, .62);
-    color: var(--color-white);
+    color: var(--white-color);
     font-size: .65rem;
     font-weight: 800;
     letter-spacing: .09em;
@@ -141,7 +141,7 @@
 }
 
 .blog-category__meta span svg {
-    stroke: var(--color-secondary-light);
+    stroke: var(--color-second-light);
 }
 
 .blog-category__meta .dot {
@@ -158,7 +158,7 @@
     font-size: 1.14rem;
     line-height: 1.4;
     min-height: calc(1.4 * 2em);
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .blog-category__title a {
@@ -184,17 +184,17 @@
     min-height: 38px;
     padding: 8px 12px;
     border-radius: 999px;
-    background: var(--color-primary);
+    background: var(--main-color);
     font-size: 0.76rem;
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--white-color);
     text-decoration: none;
     transition: gap .3s ease, background-color .3s ease;
 }
 
 .blog-category:hover .blog-category__cta {
     gap: 10px;
-    background: var(--color-secondary);
+    background: var(--color-second);
 }
 
 .blog-category__cta svg {
@@ -260,7 +260,7 @@
     z-index: 2;
     background: rgba(255, 255, 255, .85);
     backdrop-filter: blur(4px);
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.95rem;
@@ -288,7 +288,7 @@
     border: 1px solid rgba(255, 255, 255, .22);
     border-radius: var(--radius-md);
     padding: 14px 16px;
-    color: var(--color-white);
+    color: var(--white-color);
     transition: background .2s ease;
     /*corner-shape: scoop;*/
 }
@@ -360,14 +360,14 @@
 .tour-card-v2__price strong {
     font-family: var(--font-heading);
     font-size: 1.15rem;
-    color: var(--color-accent-light);
+    color: var(--accent-color-light);
 }
 
 .tour-card-v2__cta {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: var(--color-accent);
+    background: var(--accent-color);
     border: none;
     display: flex;
     align-items: center;
@@ -382,7 +382,7 @@
 }
 
 .tour-card-v2__cta svg {
-    stroke: var(--color-primary-dark);
+    stroke: var(--main-color-dark);
 }
 
 /*==========================================================
@@ -405,7 +405,7 @@
 .tour-card {
     --tilt: -3deg;
     position: relative;
-    background: var(--color-white);
+    background: var(--white-color);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-md);
     padding-bottom: 1.4rem;
@@ -472,8 +472,8 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--color-accent-light);
-    box-shadow: 0 0 6px var(--color-accent);
+    background: var(--accent-color-light);
+    box-shadow: 0 0 6px var(--accent-color);
     animation: blink 1.8s ease-in-out infinite;
 }
 
@@ -526,7 +526,7 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-white);
+    color: var(--white-color);
     background: rgba(8, 40, 68, .55);
     padding: 3px 7px;
     border-radius: 3px;
@@ -537,8 +537,8 @@
     height: 12px;
     margin: 0 10px;
     background:
-        linear-gradient(-45deg, var(--color-white) 6px, transparent 0) 0 bottom / 12px 12px repeat-x,
-        linear-gradient(45deg, var(--color-white) 6px, transparent 0) 0 bottom / 12px 12px repeat-x;
+        linear-gradient(-45deg, var(--white-color) 6px, transparent 0) 0 bottom / 12px 12px repeat-x,
+        linear-gradient(45deg, var(--white-color) 6px, transparent 0) 0 bottom / 12px 12px repeat-x;
     background-color: var(--color-gray-200);
 }
 
@@ -551,7 +551,7 @@
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 1.15rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 0 0 0.35rem;
     line-height: 1.25;
 }
@@ -629,7 +629,7 @@
 .info__price strong {
     font-family: var(--font-heading);
     font-size: 1.3rem;
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
 }
 
 .info__price small {
@@ -641,7 +641,7 @@
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.8rem;
-    color: var(--color-white);
+    color: var(--white-color);
     background: var(--clr-btn);
     background-image: var(--gradient-main);
     background-size: 220% 100%;
@@ -743,14 +743,14 @@
 }
 
 .cta-banner__badge-icon svg {
-    stroke: var(--color-white);
+    stroke: var(--white-color);
 }
 
 .cta-banner__badge span {
     font-family: var(--font-heading);
     font-style: italic;
     font-size: 0.86rem;
-    color: var(--color-white);
+    color: var(--white-color);
 }
 
 .cta-banner__content h2 {
@@ -758,12 +758,12 @@
     font-weight: 700;
     font-size: clamp(1.9rem, 3.4vw, 2.7rem);
     line-height: 1.22;
-    color: var(--color-white);
+    color: var(--white-color);
     margin: 0 0 2rem;
 }
 
 .cta-banner__content h2 em {
-    color: var(--color-accent-light);
+    color: var(--accent-color-light);
     font-style: italic;
     font-weight: 600;
 }
@@ -779,7 +779,7 @@
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.92rem;
-    color: var(--color-primary-dark);
+    color: var(--main-color-dark);
     box-shadow: var(--shadow-md);
     transition: transform .25s ease, box-shadow .25s ease;
 }
@@ -793,7 +793,7 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: var(--color-primary-dark);
+    background: var(--main-color-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -806,7 +806,7 @@
 }
 
 .cta-banner__cta-arrow svg {
-    stroke: var(--color-white);
+    stroke: var(--white-color);
 }
 
 /* Ticket mockup — decorative, echoes the site's torn-edge card motif */
@@ -822,7 +822,7 @@
     border-radius: 14px;
     box-shadow: var(--shadow-lg);
     transform: rotate(-7deg);
-    color: var(--color-white);
+    color: var(--white-color);
     overflow: hidden;
 }
 
@@ -834,7 +834,7 @@
 }
 
 .ticket-mockup__row svg {
-    stroke: var(--color-accent-light);
+    stroke: var(--accent-color-light);
 }
 
 .ticket-mockup__code {
@@ -859,7 +859,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: var(--color-primary);
+    background: var(--main-color);
 }
 
 .ticket-mockup__perf::before {
@@ -883,7 +883,7 @@
 }
 
 .ticket-mockup__route svg {
-    stroke: var(--color-accent-light);
+    stroke: var(--accent-color-light);
 }
 
 
@@ -913,7 +913,7 @@
 }
 
 .breadcrumb a:hover {
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .breadcrumb svg {
@@ -925,7 +925,7 @@
 }
 
 .breadcrumb .current {
-    color: var(--color-primary);
+    color: var(--main-color);
     font-weight: 700;
 }
 
@@ -976,7 +976,7 @@
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-    color: var(--color-white);
+    color: var(--white-color);
     margin: 0 0 0.9rem;
 }
 
@@ -993,12 +993,12 @@
 }
 
 .category-hero__stars svg {
-    fill: var(--color-accent);
+    fill: var(--accent-color);
 }
 
 .category-hero__score {
     background: rgba(201, 155, 61, .9);
-    color: var(--color-primary-dark);
+    color: var(--main-color-dark);
     font-weight: 800;
     font-size: 0.76rem;
     padding: 3px 9px;
@@ -1011,7 +1011,7 @@
 }
 
 .category-hero__reviews strong {
-    color: var(--color-white);
+    color: var(--white-color);
 }
 
 .category-hero__content p.desc {
@@ -1033,7 +1033,7 @@
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--color-white);
+    color: var(--white-color);
     background: rgba(255, 255, 255, .12);
     border: 1px solid rgba(255, 255, 255, .35);
     border-radius: 999px;
@@ -1061,12 +1061,12 @@
 }
 
 .category-hero__trust-item svg {
-    stroke: var(--color-accent-light);
+    stroke: var(--accent-color-light);
     flex-shrink: 0;
 }
 
 .category-hero__trust-item strong {
-    color: var(--color-white);
+    color: var(--white-color);
 }
 
 /* Featured category — reuses the ticket-mockup perforation language, as a standalone card */
@@ -1078,7 +1078,7 @@
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    color: var(--color-white);
+    color: var(--white-color);
 }
 
 .featured-ticket__image {
@@ -1097,7 +1097,7 @@
     top: 12px;
     left: 12px;
     background: var(--gradient-accent);
-    color: var(--color-primary-dark);
+    color: var(--main-color-dark);
     font-weight: 800;
     font-size: 0.62rem;
     text-transform: uppercase;
@@ -1133,12 +1133,12 @@
 
 .featured-ticket .ticket-mockup__perf::before {
     left: -25px;
-    background: var(--color-primary-dark);
+    background: var(--main-color-dark);
 }
 
 .featured-ticket .ticket-mockup__perf::after {
     right: -25px;
-    background: var(--color-primary-dark);
+    background: var(--main-color-dark);
 }
 
 .featured-ticket .ticket-mockup__route {
@@ -1153,13 +1153,13 @@
     padding-top: 10px;
     border-top: 1px dashed rgba(255, 255, 255, .3);
     text-decoration: none;
-    color: var(--color-accent-light);
+    color: var(--accent-color-light);
     font-weight: 700;
     font-size: 0.84rem;
 }
 
 .featured-ticket__cta svg {
-    stroke: var(--color-accent-light);
+    stroke: var(--accent-color-light);
     transition: transform .25s ease;
 }
 
@@ -1222,7 +1222,7 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-accent-light);
+    color: var(--accent-color-light);
     margin-bottom: 0.7rem;
 }
 
@@ -1230,7 +1230,7 @@
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: clamp(1.9rem, 3.4vw, 2.7rem);
-    color: var(--color-white);
+    color: var(--white-color);
     margin: 0 0 0.9rem;
 }
 
@@ -1244,7 +1244,7 @@
 .category-counts {
     display: flex;
     gap: 3px;
-    color: var(--color-primary);
+    color: var(--main-color);
     font-weight: 500;
 }
 
@@ -1255,13 +1255,13 @@
     border: 1px solid rgba(201, 155, 61, .32);
     border-radius: 999px;
     background: rgba(201, 155, 61, .1);
-    color: var(--color-primary);
+    color: var(--main-color);
     font-weight: 700;
     white-space: nowrap;
 }
 
 .blog-category .category-counts svg {
-    stroke: var(--color-accent-dark);
+    stroke: var(--accent-color-dark);
 }
 
 /* =========================================================
@@ -1303,7 +1303,7 @@
 }
 
 .blog-results-bar p strong {
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .blog-sort {
@@ -1312,8 +1312,8 @@
     gap: 8px;
     font-size: 0.82rem;
     font-weight: 700;
-    color: var(--color-primary);
-    background: var(--color-white);
+    color: var(--main-color);
+    background: var(--white-color);
     border: 1px solid var(--color-gray-300);
     border-radius: 999px;
     padding: 0.55rem 1.1rem;
@@ -1349,8 +1349,8 @@
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--color-primary);
-    background: var(--color-white);
+    color: var(--main-color);
+    background: var(--white-color);
     border: 1px solid var(--color-gray-300);
     text-decoration: none;
     transition: background .25s ease, color .25s ease, border-color .25s ease;
@@ -1358,12 +1358,12 @@
 
 .pagination a:hover {
     background: var(--color-blue-tint);
-    border-color: var(--color-secondary-light);
+    border-color: var(--color-second-light);
 }
 
 .pagination .is-active {
     background-image: var(--gradient-main);
-    color: var(--color-white);
+    color: var(--white-color);
     border-color: transparent;
 }
 
@@ -1389,7 +1389,7 @@
 }
 
 .widget {
-    background: var(--color-white);
+    background: var(--white-color);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
     padding: 1.5rem 1.4rem;
@@ -1399,7 +1399,7 @@
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 0 0 1.1rem;
     padding-bottom: 0.9rem;
     border-bottom: 1px solid var(--color-gray-200);
@@ -1460,7 +1460,7 @@
 }
 
 .widget-cats a:hover {
-    color: var(--color-primary);
+    color: var(--main-color);
     padding-left: 4px;
 }
 
@@ -1474,7 +1474,7 @@
 }
 
 .widget-cats a.is-active {
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
 }
 
 .widget-post {
@@ -1511,7 +1511,7 @@
     font-weight: 700;
     font-size: 0.85rem;
     line-height: 1.35;
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .widget-post__body span {
@@ -1538,12 +1538,12 @@
 
 .widget-tags a:hover {
     background-image: var(--gradient-main);
-    color: var(--color-white);
+    color: var(--white-color);
 }
 
 .widget-cta {
     background-image: var(--gradient-main);
-    color: var(--color-white);
+    color: var(--white-color);
     text-align: center;
 }
 
@@ -1559,7 +1559,7 @@
 }
 
 .widget-cta__icon svg {
-    stroke: var(--color-accent-light);
+    stroke: var(--accent-color-light);
 }
 
 .widget-cta h3 {
@@ -1597,7 +1597,7 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--color-white);
+    color: var(--white-color);
     background-image: var(--gradient-main);
     padding: 5px 14px;
     border-radius: 999px;
@@ -1609,7 +1609,7 @@
     font-weight: 700;
     font-size: clamp(1.9rem, 3.6vw, 2.7rem);
     line-height: 1.2;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 0 0 1rem;
 }
 
@@ -1646,7 +1646,7 @@
 .article-meta__author strong {
     display: block;
     font-size: 0.86rem;
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .article-meta__author span {
@@ -1704,7 +1704,7 @@
 }
 
 .article-share a:hover svg {
-    stroke: var(--color-white);
+    stroke: var(--white-color);
 }
 
 .article-share svg {
@@ -1755,10 +1755,10 @@
 }
 
 .article-body a.inline-link {
-    color: var(--color-secondary);
+    color: var(--color-second);
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: var(--color-accent);
+    text-decoration-color: var(--accent-color);
     text-underline-offset: 3px;
 }
 
@@ -1766,7 +1766,7 @@
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.55rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 2.6rem 0 1.2rem;
 }
 
@@ -1774,7 +1774,7 @@
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.3rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 0 0 0.9rem;
     display: flex;
     align-items: baseline;
@@ -1783,7 +1783,7 @@
 
 .article-body h3.item-h3 .num {
     font-size: 0.95rem;
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
     font-family: var(--font-body);
     font-weight: 800;
 }
@@ -1818,12 +1818,12 @@
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.05rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 0 0 1rem;
 }
 
 .quick-glance__title svg {
-    stroke: var(--color-accent-dark);
+    stroke: var(--accent-color-dark);
     flex-shrink: 0;
 }
 
@@ -1847,12 +1847,12 @@
 }
 
 .quick-glance li strong {
-    color: var(--color-primary);
+    color: var(--main-color);
     flex-shrink: 0;
 }
 
 .quick-glance a {
-    color: var(--color-secondary);
+    color: var(--color-second);
     font-weight: 700;
     text-decoration: none;
 }
@@ -1865,16 +1865,16 @@
 .highlight-box {
     display: flex;
     gap: 12px;
-    background: var(--color-white);
+    background: var(--white-color);
     border: 1px solid var(--color-gray-200);
-    border-left: 4px solid var(--color-accent);
+    border-left: 4px solid var(--accent-color);
     border-radius: var(--radius-md);
     padding: 1.1rem 1.3rem;
     margin: 0 0 1.3rem;
 }
 
 .highlight-box svg {
-    stroke: var(--color-accent-dark);
+    stroke: var(--accent-color-dark);
     flex-shrink: 0;
     margin-top: 2px;
 }
@@ -1887,7 +1887,7 @@
 }
 
 .highlight-box strong {
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 /* Info row: address / hours / price */
@@ -1909,11 +1909,11 @@
 }
 
 .info-row strong {
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .info-row svg {
-    stroke: var(--color-accent-dark);
+    stroke: var(--accent-color-dark);
     flex-shrink: 0;
     margin-top: 2px;
 }
@@ -1928,7 +1928,7 @@
 .product-strip-wrap .strip-label {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 0 0 0.9rem;
     display: flex;
     align-items: center;
@@ -1936,7 +1936,7 @@
 }
 
 .product-strip-wrap .strip-label svg {
-    stroke: var(--color-accent-dark);
+    stroke: var(--accent-color-dark);
 }
 
 .product-strip {
@@ -1963,7 +1963,7 @@
 }
 
 .product-card {
-    background: var(--color-white);
+    background: var(--white-color);
     border: 1px solid var(--color-gray-200);
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -1994,7 +1994,7 @@
     top: 8px;
     left: 8px;
     background: rgba(255, 255, 255, .92);
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
     font-size: 0.68rem;
     font-weight: 800;
     padding: 3px 8px;
@@ -2011,7 +2011,7 @@
     font-weight: 700;
     font-size: 0.82rem;
     line-height: 1.35;
-    color: var(--color-primary);
+    color: var(--main-color);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -2029,13 +2029,13 @@
 }
 
 .product-card__rating svg {
-    fill: var(--color-accent);
+    fill: var(--accent-color);
     width: 11px;
     height: 11px;
 }
 
 .product-card__rating strong {
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .product-card__price {
@@ -2051,7 +2051,7 @@
 .product-card__price strong {
     font-family: var(--font-heading);
     font-size: 0.98rem;
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
 }
 
 /* Newsletter box inside article */
@@ -2069,7 +2069,7 @@
 
 .article-newsletter__text h3 {
     font-family: var(--font-heading);
-    color: var(--color-white);
+    color: var(--white-color);
     font-size: 1.35rem;
     margin: 0 0 0.5rem;
 }
@@ -2094,7 +2094,7 @@
     border: none;
     background: transparent;
     outline: none;
-    color: var(--color-white);
+    color: var(--white-color);
     font-family: var(--font-body);
     font-size: 0.85rem;
     width: 220px;
@@ -2107,8 +2107,8 @@
 .article-newsletter button {
     border: none;
     border-radius: 999px;
-    background: var(--color-accent);
-    color: var(--color-primary-dark);
+    background: var(--accent-color);
+    color: var(--main-color-dark);
     font-weight: 800;
     font-size: 0.82rem;
     padding: 0.7rem 1.4rem;
@@ -2138,7 +2138,7 @@
 .article-tags span.label {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin-right: 4px;
 }
 
@@ -2154,7 +2154,7 @@
 
 .article-tags a:hover {
     background-image: var(--gradient-main);
-    color: var(--color-white);
+    color: var(--white-color);
 }
 
 /* =========================================================
@@ -2167,12 +2167,12 @@
 
 /* Featured article card for blog category hero (swaps in for .featured-ticket) */
 .featured-post-card {
-    background: var(--color-white);
+    background: var(--white-color);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     width: 300px;
-    border: 1px solid var(--color-accent-dark);
+    border: 1px solid var(--accent-color-dark);
 }
 
 .featured-post-card__image {
@@ -2190,8 +2190,8 @@
     position: absolute;
     top: 12px;
     left: 12px;
-    background: var(--color-accent);
-    color: var(--color-primary-dark);
+    background: var(--accent-color);
+    color: var(--main-color-dark);
     font-size: 0.68rem;
     font-weight: 800;
     letter-spacing: .04em;
@@ -2214,7 +2214,7 @@
 .featured-post-card__body h3 {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     margin: 0 0 0.6rem;
     line-height: 1.35;
 }
@@ -2232,7 +2232,7 @@
     gap: 6px;
     font-size: 0.82rem;
     font-weight: 700;
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
     text-decoration: none;
 }
 
@@ -2252,7 +2252,7 @@
 
 .blog-card {
     position: relative;
-    background: var(--color-white);
+    background: var(--white-color);
     border: 1px solid transparent;
     border-radius: 24px;
     padding: 10px;
@@ -2277,7 +2277,7 @@
 }
 
 .blog-card:hover {
-    border-color: var(--color-primary);
+    border-color: var(--main-color);
     box-shadow: var(--shadow-md);
 }
 
@@ -2334,7 +2334,7 @@
 }
 
 .blog-card__meta span svg {
-    stroke: var(--color-secondary-light);
+    stroke: var(--color-second-light);
 }
 
 .blog-card__meta .dot {
@@ -2352,7 +2352,7 @@
     line-height: 1.35;
     height: calc(1.35 * 2em);
     max-height: calc(1.35 * 3em);
-    color: var(--color-primary);
+    color: var(--main-color);
 }
 
 .blog-card__desc {
@@ -2371,7 +2371,7 @@
     gap: 6px;
     font-size: 0.82rem;
     font-weight: 700;
-    color: var(--color-accent-dark);
+    color: var(--accent-color-dark);
     text-decoration: none;
     transition: gap .3s ease;
 }
@@ -2425,8 +2425,8 @@
 }
 
 .toc-widget__head:hover .toc-toggle {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--main-color);
+    color: var(--white-color);
 }
 
 .widget-toc.is-collapsed .toc-toggle {
@@ -2491,8 +2491,8 @@
 .toc-link:hover,
 .toc-link.active {
     background: var(--color-blue-tint);
-    color: var(--color-primary);
-    border-left-color: var(--color-accent);
+    color: var(--main-color);
+    border-left-color: var(--accent-color);
 }
 
 .toc-num {
@@ -2514,9 +2514,9 @@
 
 .toc-link:hover .toc-num,
 .toc-link.active .toc-num {
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-color: var(--color-primary);
+    background: var(--main-color);
+    color: var(--white-color);
+    border-color: var(--main-color);
 }
 
 /* Floating ToC — appears once the reader scrolls past Quick Glance */
@@ -2546,7 +2546,7 @@
     height: 52px;
     border-radius: 50%;
     background-image: var(--gradient-main);
-    color: var(--color-white);
+    color: var(--white-color);
     border: none;
     display: flex;
     align-items: center;
@@ -2565,7 +2565,7 @@
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    background: var(--color-white);
+    background: var(--white-color);
     border: 1px solid var(--color-gray-200);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
@@ -2584,10 +2584,10 @@
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     position: sticky;
     top: 0;
-    background: var(--color-white);
+    background: var(--white-color);
 }
 
 .toc-fab__panel .toc-list {

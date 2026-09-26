@@ -76,15 +76,15 @@
     }
 
     .topbar {
-        color: var(--color-primary);
+        color: var(--main-color);
     }
 
     .topbar__dropdown svg {
-        stroke: var(--color-primary);
+        stroke: var(--main-color);
     }
 
     .topbar__social svg {
-        stroke: var(--color-primary);
+        stroke: var(--main-color);
     }
 
     .topbar__social a {
@@ -148,7 +148,7 @@
       width: 8px; height: 8px;
       border-radius: 2px;
       opacity: 0;
-      background: var(--color-accent);
+      background: var(--accent-color);
       animation: ty-confetti-burst 1.1s cubic-bezier(.2,.7,.3,1) forwards;
       animation-delay: .35s;
     }
@@ -186,7 +186,7 @@
     }
     .ty-check-circle {
       fill: none;
-      stroke: var(--color-accent);
+      stroke: var(--accent-color);
       stroke-width: 4;
       stroke-linecap: round;
       stroke-dasharray: 302;
@@ -195,7 +195,7 @@
     }
     .ty-check-mark {
       fill: none;
-      stroke: var(--color-accent-dark);
+      stroke: var(--accent-color-dark);
       stroke-width: 5;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -209,7 +209,7 @@
     .ty-check-pulse {
       position: absolute; inset: 0;
       border-radius: 50%;
-      border: 2px solid var(--color-accent);
+      border: 2px solid var(--accent-color);
       opacity: 0;
       animation: ty-pulse 1.4s ease-out 0.9s;
     }
@@ -233,15 +233,15 @@
 
     .ty-eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
-      color: var(--color-accent-dark); font-weight: 700; font-size: 0.8rem;
+      color: var(--accent-color-dark); font-weight: 700; font-size: 0.8rem;
       letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.8rem;
     }
     .ty-title {
       font-family: var(--font-heading); font-weight: 700;
-      font-size: clamp(1.9rem, 4vw, 2.6rem); color: var(--color-primary);
+      font-size: clamp(1.9rem, 4vw, 2.6rem); color: var(--main-color);
       margin: 0 0 1rem; line-height: 1.2;
     }
-    .ty-title em { font-style: normal; color: var(--color-accent-dark); }
+    .ty-title em { font-style: normal; color: var(--accent-color-dark); }
     .ty-desc {
       font-size: 0.96rem; line-height: 1.75; color: var(--color-gray-500);
       max-width: 480px; margin: 0 auto 2rem;
@@ -256,7 +256,7 @@
       font-size: 0.82rem; color: var(--color-gray-700); font-weight: 600;
       margin-bottom: 2.2rem;
     }
-    .ty-ref strong { color: var(--color-primary); font-family: var(--font-heading); letter-spacing: .03em; }
+    .ty-ref strong { color: var(--main-color); font-family: var(--font-heading); letter-spacing: .03em; }
 
     /* Next steps */
     .ty-steps {
@@ -264,7 +264,7 @@
       margin-bottom: 2.4rem; text-align: left;
     }
     .ty-step {
-      background: var(--color-white);
+      background: var(--white-color);
       border: 1px solid var(--color-gray-200);
       border-radius: var(--radius-md);
       padding: 1.2rem 1.3rem;
@@ -275,7 +275,7 @@
       background: rgba(201,155,61,.14);
       display: flex; align-items: center; justify-content: center;
     }
-    .ty-step__icon svg { stroke: var(--color-accent-dark); }
+    .ty-step__icon svg { stroke: var(--accent-color-dark); }
     .ty-step h4 { margin: 0; font-size: 0.88rem; font-weight: 700; color: var(--color-gray-900); }
     .ty-step p { margin: 0; font-size: 0.8rem; line-height: 1.55; color: var(--color-gray-500); }
 
@@ -286,14 +286,14 @@
     .ty-btn-outline {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: var(--font-body); font-weight: 700; font-size: 0.86rem;
-      color: var(--color-primary);
-      background: var(--color-white);
+      color: var(--main-color);
+      background: var(--white-color);
       border: 1.5px solid var(--color-gray-300);
       border-radius: 999px; padding: 0.85rem 1.6rem;
       text-decoration: none;
       transition: border-color .25s ease, transform .15s ease, background .25s ease;
     }
-    .ty-btn-outline:hover { border-color: var(--color-primary); background: var(--color-off-white); }
+    .ty-btn-outline:hover { border-color: var(--main-color); background: var(--color-off-white); }
     .ty-btn-outline:active { transform: scale(.96); }
 
     .ty-social {
@@ -307,8 +307,8 @@
       transition: background .25s ease, border-color .25s ease, transform .25s ease;
     }
     .ty-social a:hover { background: var(--gradient-accent); border-color: transparent; transform: translateY(-3px); }
-    .ty-social svg { stroke: var(--color-primary); transition: stroke .25s ease; }
-    .ty-social a:hover svg { stroke: var(--color-white); }
+    .ty-social svg { stroke: var(--main-color); transition: stroke .25s ease; }
+    .ty-social a:hover svg { stroke: var(--white-color); }
 
     @media (prefers-reduced-motion: reduce) {
       .ty-blob, .ty-confetti span, .ty-check-circle, .ty-check-mark, .ty-check-pulse, .ty-fade {
@@ -1142,7 +1142,7 @@
 
       /* ---------- Confetti burst, brand-colored ---------- */
       const confettiHost = document.getElementById('tyConfetti');
-      const colors = ['var(--color-accent)', 'var(--color-primary)', 'var(--color-secondary-light)', 'var(--color-accent-light)'];
+      const colors = ['var(--accent-color)', 'var(--main-color)', 'var(--color-second-light)', 'var(--accent-color-light)'];
       const total = 26;
       for (let i = 0; i < total; i++) {
         const dot = document.createElement('span');

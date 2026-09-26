@@ -8,15 +8,15 @@
     }
 
     .topbar {
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .topbar__dropdown svg {
-      stroke: var(--color-primary);
+      stroke: var(--main-color);
     }
 
     .topbar__social svg {
-      stroke: var(--color-primary);
+      stroke: var(--main-color);
     }
 
     .topbar__social a {
@@ -96,7 +96,7 @@
     }
 
     .hero-text .eyebrow {
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
       font-weight: 700;
       font-size: 0.78rem;
       letter-spacing: 0.2em;
@@ -120,13 +120,13 @@
     .hero-text h1 .l2 {
       display: block;
       font-weight: 700;
-      color: var(--color-white);
+      color: var(--white-color);
     }
 
     .hero-text h1 .l3 {
       display: block;
       font-weight: 700;
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
     }
 
     .hero-search {
@@ -143,7 +143,7 @@
       background: transparent;
       border: none;
       outline: none;
-      color: var(--color-primary);
+      color: var(--main-color);
       font-family: var(--font-body);
       font-size: 0.88rem;
       width: 220px;
@@ -177,7 +177,7 @@
     }
 
     .hero-search__btn svg {
-      stroke: var(--color-white);
+      stroke: var(--white-color);
     }
 
     /* Phone mockup, built in CSS to match brand colors */
@@ -244,13 +244,13 @@
     .phone__topbar strong {
       font-family: var(--font-heading);
       font-size: 0.9rem;
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .phone__topbar span {
       font-size: 0.6rem;
       font-weight: 700;
-      color: var(--color-accent-dark);
+      color: var(--accent-color-dark);
       background: rgba(201, 155, 61, .14);
       padding: 3px 8px;
       border-radius: 999px;
@@ -263,7 +263,7 @@
     .phone-swiper .swiper-slide {}
 
     .mini-card {
-      background: var(--color-white);
+      background: var(--white-color);
       border-radius: var(--radius-sm);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
@@ -283,7 +283,7 @@
       margin: 0 0 3px;
       font-family: var(--font-heading);
       font-size: 1rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       font-weight: 500;
     }
     
@@ -302,7 +302,7 @@
     .mini-card__row strong {
       font-family: var(--font-heading);
       font-size: 0.85rem;
-      color: var(--color-accent-dark);
+      color: var(--accent-color-dark);
     }
 
     .phone-swiper .swiper-pagination-bullet {
@@ -311,7 +311,7 @@
     }
 
     .phone-swiper .swiper-pagination-bullet-active {
-      background: var(--color-accent);
+      background: var(--accent-color);
     }
 
     .phone-content {
@@ -345,7 +345,7 @@
       font-weight: 700;
       line-height: 1;
       color: transparent;
-      -webkit-text-stroke: 1.5px var(--color-accent);
+      -webkit-text-stroke: 1.5px var(--accent-color);
       flex-shrink: 0;
     }
 
@@ -353,7 +353,7 @@
       margin: 0.2rem 0 0.4rem;
       font-family: var(--font-heading);
       font-size: 1.05rem;
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .step__body p {
@@ -373,25 +373,25 @@
       margin: 0 0 2.5rem;
     }
 
-    .section-title__main {
+    .section-title {
       flex-shrink: 0;
     }
 
-    .section-title__main .eyebrow {
+    .section-title .eyebrow {
       display: inline-block;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--color-accent-dark);
+      color: var(--accent-color-dark);
       margin-bottom: 0.5rem;
     }
 
-    .section-title__main h2 {
+    .section-title h2 {
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: clamp(1.8rem, 3vw, 2.6rem);
-      color: var(--color-primary);
+      color: var(--main-color);
       margin: 0;
       text-transform: uppercase;
       letter-spacing: -0.01em;
@@ -516,7 +516,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--color-white);
+  color: var(--white-color);
   white-space: nowrap;
   padding: 0 3rem;
   opacity: 0.92;
@@ -528,13 +528,13 @@
   object-fit: contain;
   flex: 0 0 auto;
   -webkit-user-drag: none;
-  background: var(--color-white);
+  background: var(--white-color);
   padding: 10px;
   border-radius: var(--radius-lg);
 }
 
 /* .partner-logo svg {
-  stroke: var(--color-white);
+  stroke: var(--white-color);
   flex-shrink: 0;
 }
 
@@ -628,13 +628,13 @@
 
     .accordion__item:hover .accordion__arrow,
     .accordion__item.is-active .accordion__arrow {
-      background: var(--color-accent);
-      border-color: var(--color-accent);
+      background: var(--accent-color);
+      border-color: var(--accent-color);
       transform: rotate(45deg);
     }
 
     .accordion__arrow svg {
-      stroke: var(--color-white);
+      stroke: var(--white-color);
     }
 
     .accordion__content {
@@ -643,7 +643,7 @@
       right: 20px;
       bottom: 20px;
       z-index: 2;
-      color: var(--color-white);
+      color: var(--white-color);
     }
 
     .accordion__label {
@@ -668,7 +668,7 @@
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
       background: rgba(255, 255, 255, .14);
       border: 1px solid rgba(255, 255, 255, .28);
       padding: 3px 10px;
@@ -740,7 +740,7 @@
   width: 360px;
   height: 60px;
   border-radius: 50%;
-  border-top: 6px solid var(--color-primary);
+  border-top: 6px solid var(--main-color);
   opacity: 0.07;
   z-index: 0;
   pointer-events: none;
@@ -777,7 +777,7 @@
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.7rem;
-  color: var(--color-accent-dark);
+  color: var(--accent-color-dark);
 }
 
 .about-v2-stat span {
@@ -831,7 +831,7 @@
 .about-v2-balloon svg {
   width: 42px;
   height: 42px;
-  stroke: var(--color-accent);
+  stroke: var(--accent-color);
   filter: drop-shadow(var(--shadow-sm));
 }
 
@@ -839,7 +839,7 @@
   position: relative;
   z-index: 3;
   max-width: 100%;
-  background: var(--color-white);
+  background: var(--white-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   padding: 18px;
@@ -883,7 +883,7 @@
 }
 
 .about-v2-checklist .chev {
-  color: var(--color-accent-dark);
+  color: var(--accent-color-dark);
   flex-shrink: 0;
   display: flex;
 }
@@ -896,7 +896,7 @@
 }
 
 .about-v2-content .eyebrow-row svg {
-  stroke: var(--color-accent-dark);
+  stroke: var(--accent-color-dark);
 }
 
 .about-v2-content .eyebrow-row span {
@@ -916,7 +916,7 @@
 
 .about-v2-content h2 em {
   font-style: normal;
-  color: var(--color-accent-dark);
+  color: var(--accent-color-dark);
 }
 
 .about-v2-content .desc {
@@ -957,7 +957,7 @@
 }
 
 .about-v2-phone__icon svg {
-  stroke: var(--color-white);
+  stroke: var(--white-color);
 }
 
 .about-v2-phone-text {
@@ -1063,7 +1063,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: var(--color-white);
+  background: var(--white-color);
   transition: opacity .5s ease;
 }
 
@@ -1114,7 +1114,7 @@
   font-weight: 700;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--color-accent);
+  -webkit-text-stroke: 1.5px var(--accent-color);
   top: 30px;
   right: 20px;
 } */
@@ -1148,30 +1148,30 @@
 }
 
 .service-box__icon svg {
-  stroke: var(--color-accent-dark);
+  stroke: var(--accent-color-dark);
   transition: stroke .4s ease;
   width: 40px;
   height: 40px;
 }
 .service-box__icon i {
   font-size: 1.8rem;
-  color: var(--color-accent-dark);
+  color: var(--accent-color-dark);
 }
 .service-box:hover .service-box__icon svg {
-  stroke: var(--color-accent-light);
+  stroke: var(--accent-color-light);
 }
 
 .service-box__title {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 1.05rem;
-  color: var(--color-primary);
+  color: var(--main-color);
   margin: 0 0 0.4rem;
   transition: color .4s ease;
 }
 
 /* .service-box:hover .service-box__title {
-  color: var(--color-white);
+  color: var(--white-color);
 } */
 
 .service-box__desc {
@@ -1238,7 +1238,7 @@
       z-index: 2;
       background: rgba(255, 255, 255, .85);
       backdrop-filter: blur(4px);
-      color: var(--color-accent-dark);
+      color: var(--accent-color-dark);
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: 0.95rem;
@@ -1266,7 +1266,7 @@
       border: 1px solid rgba(255, 255, 255, .22);
       border-radius: var(--radius-md);
       padding: 14px 16px;
-      color: var(--color-white);
+      color: var(--white-color);
       transition: background .4s ease;
     }
 
@@ -1337,14 +1337,14 @@
     .tour-card-v2__price strong {
       font-family: var(--font-heading);
       font-size: 1.15rem;
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
     }
 
     .tour-card-v2__cta {
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: var(--color-accent);
+      background: var(--accent-color);
       border: none;
       display: flex;
       align-items: center;
@@ -1359,7 +1359,7 @@
     }
 
     .tour-card-v2__cta svg {
-      stroke: var(--color-primary-dark);
+      stroke: var(--main-color-dark);
     }
 
     /*==========================================================
@@ -1382,7 +1382,7 @@
     .tour-card {
       --tilt: -3deg;
       position: relative;
-      background: var(--color-white);
+      background: var(--white-color);
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow-md);
       padding-bottom: 1.4rem;
@@ -1449,8 +1449,8 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--color-accent-light);
-      box-shadow: 0 0 6px var(--color-accent);
+      background: var(--accent-color-light);
+      box-shadow: 0 0 6px var(--accent-color);
       animation: blink 1.8s ease-in-out infinite;
     }
 
@@ -1503,7 +1503,7 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-white);
+      color: var(--white-color);
       background: rgba(8, 40, 68, .55);
       padding: 3px 7px;
       border-radius: 3px;
@@ -1514,8 +1514,8 @@
       height: 12px;
       margin: 0 10px;
       background:
-        linear-gradient(-45deg, var(--color-white) 6px, transparent 0) 0 bottom / 12px 12px repeat-x,
-        linear-gradient(45deg, var(--color-white) 6px, transparent 0) 0 bottom / 12px 12px repeat-x;
+        linear-gradient(-45deg, var(--white-color) 6px, transparent 0) 0 bottom / 12px 12px repeat-x,
+        linear-gradient(45deg, var(--white-color) 6px, transparent 0) 0 bottom / 12px 12px repeat-x;
       background-color: var(--color-gray-200);
     }
 
@@ -1528,7 +1528,7 @@
       font-family: var(--font-heading);
       font-weight: 600;
       font-size: 1.15rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       margin: 0 0 0.35rem;
       line-height: 1.25;
     }
@@ -1606,7 +1606,7 @@
     .info__price strong {
       font-family: var(--font-heading);
       font-size: 1.3rem;
-      color: var(--color-accent-dark);
+      color: var(--accent-color-dark);
     }
 
     .info__price small {
@@ -1618,7 +1618,7 @@
       font-family: var(--font-body);
       font-weight: 700;
       font-size: 0.8rem;
-      color: var(--color-white);
+      color: var(--white-color);
       background: var(--clr-btn);
       background-image: var(--gradient-main);
       background-size: 220% 100%;
@@ -1709,7 +1709,7 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--color-accent-dark);
+  color: var(--accent-color-dark);
   flex-shrink: 0;
 }
 
@@ -1719,7 +1719,7 @@
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 1rem;
-  color: var(--color-primary);
+  color: var(--main-color);
 }
 
 .faq-item__arrow {
@@ -1735,17 +1735,17 @@
 }
 
 .faq-item__arrow svg {
-  stroke: var(--color-primary);
+  stroke: var(--main-color);
   transition: stroke .3s ease;
 }
 
 .faq-item.is-open .faq-item__arrow {
-  background: var(--color-accent);
+  background: var(--accent-color);
   transform: rotate(90deg);
 }
 
 .faq-item.is-open .faq-item__arrow svg {
-  stroke: var(--color-white);
+  stroke: var(--white-color);
 }
 
 .faq-item__answer {
@@ -1794,7 +1794,7 @@
   left: 16px;
   bottom: 16px;
   right: 16px;
-  background: var(--color-white);
+  background: var(--white-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   padding: 12px 16px;
@@ -1816,7 +1816,7 @@
 }
 
 .faq-review__stars svg {
-  fill: var(--color-accent);
+  fill: var(--accent-color);
 }
 
 .faq-review__text {
@@ -1837,7 +1837,7 @@
 .BrandName-faq-toggle-btn {
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-accent-dark);
+  color: var(--accent-color-dark);
   font-family: var(--font-body);
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -1856,7 +1856,7 @@
   align-items: center;
   display: none;
   gap: .5rem;
-  color: var(--color-primary);
+  color: var(--main-color);
   font-size: .875rem;
   font-weight: 700;
   text-decoration: none;
@@ -1869,7 +1869,7 @@
 }
 
 .BrandName-faq-cta-link:hover {
-  color: var(--color-accent);
+  color: var(--accent-color);
   gap: .75rem;
 }
 
@@ -1897,7 +1897,7 @@ svg:hover .text-content {
   font: 700 10px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  fill: var(--color-primary);
+  fill: var(--main-color);
   mix-blend-mode: normal;
   transition: ease fill 0.5s;
 }
@@ -1910,7 +1910,7 @@ svg:hover .text-content {
   top: 10px;
   left: 10px;
   padding: 1em;
-  color: var(--color-primary);
+  color: var(--main-color);
   background-color: white;
   border-radius: 25px;
   cursor: pointer;
@@ -1919,12 +1919,12 @@ svg:hover .text-content {
 #dev a {
   text-decoration: none;
   font-weight: bold;
-  color: var(--color-primary);
+  color: var(--main-color);
   transition: ease all 0.4s;
 }
 
 #dev a:hover {
-  color: var(--color-accent);
+  color: var(--accent-color);
   text-decoration: underline;
 }
 
@@ -1954,7 +1954,7 @@ svg:hover .text-content {
 
     .blog-card {
       position: relative;
-      background: var(--color-white);
+      background: var(--white-color);
       border: 1px solid transparent;
       border-radius: 20px;
       padding: 10px;
@@ -1978,7 +1978,7 @@ svg:hover .text-content {
     }
 
     .blog-card:hover {
-      border-color: var(--color-primary);
+      border-color: var(--main-color);
       box-shadow: var(--shadow-md);
     }
 
@@ -2034,7 +2034,7 @@ svg:hover .text-content {
       font-weight: 600;
       font-size: 1.08rem;
       line-height: 1.35;
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .blog-card__desc {
@@ -2050,7 +2050,7 @@ svg:hover .text-content {
       gap: 6px;
       font-size: 0.82rem;
       font-weight: 700;
-      color: var(--color-accent-dark);
+      color: var(--accent-color-dark);
       text-decoration: none;
       transition: gap .3s ease;
     }
@@ -2297,7 +2297,7 @@ svg:hover .text-content {
 .testimonials-swiper .swiper-wrapper { padding-bottom: 0; }
 
 .testimonial-card {
-  background: var(--color-white);
+  background: var(--white-color);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   padding: 2.6rem 2.4rem 2.2rem;
@@ -2312,7 +2312,7 @@ svg:hover .text-content {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.testimonial-card__quote-mark svg { fill: var(--color-accent); }
+.testimonial-card__quote-mark svg { fill: var(--accent-color); }
 
 .testimonial-card__stars {
   display: flex;
@@ -2320,7 +2320,7 @@ svg:hover .text-content {
   gap: 3px;
   margin-bottom: 1rem;
 }
-.testimonial-card__stars svg { fill: var(--color-accent); }
+.testimonial-card__stars svg { fill: var(--accent-color); }
 
 .testimonial-card__text {
   margin: 0 0 1.6rem;
@@ -2331,7 +2331,7 @@ svg:hover .text-content {
   height: calc(1.6 * 3em);
   overflow-x: hidden;
   overflow-y: auto;
-  color: var(--color-primary);
+  color: var(--main-color);
 }
 
 .testimonial-card__person {
@@ -2353,7 +2353,7 @@ svg:hover .text-content {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--color-primary);
+  color: var(--main-color);
 }
 .testimonial-card__role { font-size: 0.74rem; color: var(--color-gray-500); }
 
@@ -2400,7 +2400,7 @@ svg:hover .text-content {
 .testimonials-progress-track {
   flex: 1;
   height: 5px;
-  background: var(--color-white);
+  background: var(--white-color);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -2420,8 +2420,8 @@ svg:hover .text-content {
   height: 38px;
   border-radius: 50%;
   border: 1px solid var(--color-gray-200);
-  background: var(--color-white);
-  color: var(--color-primary);
+  background: var(--white-color);
+  color: var(--main-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2556,13 +2556,13 @@ svg:hover .text-content {
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: 1.4rem;
-      color: var(--color-white);
+      color: var(--white-color);
       text-decoration: none;
       margin-bottom: 1rem;
     }
 
     .footer-logo span {
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
       font-style: italic;
     }
 
@@ -2611,7 +2611,7 @@ svg:hover .text-content {
     }
 
     .footer-social svg {
-      stroke: var(--color-white);
+      stroke: var(--white-color);
       width: 15px;
       height: 15px;
     }
@@ -2620,7 +2620,7 @@ svg:hover .text-content {
       font-family: var(--font-heading);
       font-weight: 600;
       font-size: 1rem;
-      color: var(--color-white);
+      color: var(--white-color);
       margin: 0 0 1.2rem;
     }
 
@@ -2641,7 +2641,7 @@ svg:hover .text-content {
     }
 
     .footer-col a:hover {
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
       padding-left: 4px;
     }
 
@@ -2667,7 +2667,7 @@ svg:hover .text-content {
       background: transparent;
       border: none;
       outline: none;
-      color: var(--color-white);
+      color: var(--white-color);
       font-family: var(--font-body);
       font-size: 0.85rem;
       padding: 0.55rem 0 0.55rem 0.9rem;
@@ -2697,7 +2697,7 @@ svg:hover .text-content {
     }
 
     .footer-newsletter button svg {
-      stroke: var(--color-primary-dark);
+      stroke: var(--main-color-dark);
     }
 
     .site-footer__bottom {
@@ -2729,7 +2729,7 @@ svg:hover .text-content {
     }
 
     .site-footer__legal a:hover {
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
     }
 
     @media (max-width: 900px) {
@@ -2962,14 +2962,14 @@ svg:hover .text-content {
 }
 
 .cta-banner__badge-icon svg {
-  stroke: var(--color-white);
+  stroke: var(--white-color);
 }
 
 .cta-banner__badge span {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 0.86rem;
-  color: var(--color-white);
+  color: var(--white-color);
 }
 
 .cta-banner__content h2 {
@@ -2977,12 +2977,12 @@ svg:hover .text-content {
   font-weight: 700;
   font-size: clamp(1.9rem, 3.4vw, 2.7rem);
   line-height: 1.22;
-  color: var(--color-white);
+  color: var(--white-color);
   margin: 0 0 2rem;
 }
 
 .cta-banner__content h2 em {
-  color: var(--color-accent-light);
+  color: var(--accent-color-light);
   font-style: italic;
   font-weight: 600;
 }
@@ -2998,7 +2998,7 @@ svg:hover .text-content {
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.92rem;
-  color: var(--color-white);
+  color: var(--white-color);
   box-shadow: var(--shadow-md);
   transition: transform .25s ease, box-shadow .25s ease;
 }
@@ -3012,7 +3012,7 @@ svg:hover .text-content {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--color-primary-dark);
+  background: var(--main-color-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3025,7 +3025,7 @@ svg:hover .text-content {
 }
 
 .cta-banner__cta-arrow svg {
-  stroke: var(--color-white);
+  stroke: var(--white-color);
 }
 
 /* Ticket mockup ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â decorative, echoes the site's torn-edge card motif */
@@ -3042,7 +3042,7 @@ svg:hover .text-content {
   /* border-radius: 14px; */
   /* box-shadow: var(--shadow-lg); */
   transform: rotate(-7deg);
-  color: var(--color-white);
+  color: var(--white-color);
   overflow: hidden;
   background-image: url(../images/ticket.png);
   background-size: cover;
@@ -3056,7 +3056,7 @@ svg:hover .text-content {
 }
 
 .ticket-mockup__row svg {
-  stroke: var(--color-accent-light);
+  stroke: var(--accent-color-light);
 }
 
 .ticket-mockup__code {
@@ -3081,7 +3081,7 @@ svg:hover .text-content {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: var(--main-color);
 }
 
 .ticket-mockup__perf::before {
@@ -3105,7 +3105,7 @@ svg:hover .text-content {
 }
 
 .ticket-mockup__route svg {
-  stroke: var(--color-accent-light);
+  stroke: var(--accent-color-light);
 }
 
 .plane-shape {
@@ -3201,7 +3201,7 @@ svg:hover .text-content {
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-      color: var(--color-white);
+      color: var(--white-color);
       margin: 0 0 0.9rem;
     }
 
@@ -3218,12 +3218,12 @@ svg:hover .text-content {
     }
 
     .category-hero__stars svg {
-      fill: var(--color-accent);
+      fill: var(--accent-color);
     }
 
     .category-hero__score {
       background: rgba(201, 155, 61, .9);
-      color: var(--color-primary-dark);
+      color: var(--main-color-dark);
       font-weight: 800;
       font-size: 0.76rem;
       padding: 3px 9px;
@@ -3236,7 +3236,7 @@ svg:hover .text-content {
     }
 
     .category-hero__reviews strong {
-      color: var(--color-white);
+      color: var(--white-color);
     }
 
     .category-hero__content p.desc {
@@ -3258,7 +3258,7 @@ svg:hover .text-content {
       font-family: var(--font-body);
       font-weight: 700;
       font-size: 0.85rem;
-      color: var(--color-white);
+      color: var(--white-color);
       background: rgba(255, 255, 255, .12);
       border: 1px solid rgba(255, 255, 255, .35);
       border-radius: 999px;
@@ -3286,12 +3286,12 @@ svg:hover .text-content {
     }
 
     .category-hero__trust-item svg {
-      stroke: var(--color-accent-light);
+      stroke: var(--accent-color-light);
       flex-shrink: 0;
     }
 
     .category-hero__trust-item strong {
-      color: var(--color-white);
+      color: var(--white-color);
     }
 
     /* Featured category — reuses the ticket-mockup perforation language, as a standalone card */
@@ -3303,7 +3303,7 @@ svg:hover .text-content {
       border-radius: var(--radius-md);
       overflow: hidden;
       box-shadow: var(--shadow-lg);
-      color: var(--color-white);
+      color: var(--white-color);
     }
 
     .featured-ticket__image {
@@ -3322,7 +3322,7 @@ svg:hover .text-content {
       top: 12px;
       left: 12px;
       background: var(--gradient-accent);
-      color: var(--color-primary-dark);
+      color: var(--main-color-dark);
       font-weight: 800;
       font-size: 0.62rem;
       text-transform: uppercase;
@@ -3358,12 +3358,12 @@ svg:hover .text-content {
 
     .featured-ticket .ticket-mockup__perf::before {
       left: -25px;
-      background: var(--color-primary-dark);
+      background: var(--main-color-dark);
     }
 
     .featured-ticket .ticket-mockup__perf::after {
       right: -25px;
-      background: var(--color-primary-dark);
+      background: var(--main-color-dark);
     }
 
     .featured-ticket .ticket-mockup__route {
@@ -3378,13 +3378,13 @@ svg:hover .text-content {
       padding-top: 10px;
       border-top: 1px dashed rgba(255, 255, 255, .3);
       text-decoration: none;
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
       font-weight: 700;
       font-size: 0.84rem;
     }
 
     .featured-ticket__cta svg {
-      stroke: var(--color-accent-light);
+      stroke: var(--accent-color-light);
       transition: transform .25s ease;
     }
 
@@ -3449,7 +3449,7 @@ svg:hover .text-content {
       gap: 8px;
       background: rgba(255, 255, 255, .14);
       border: 1px solid rgba(255, 255, 255, .25);
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
       font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: .04em;
@@ -3459,11 +3459,11 @@ svg:hover .text-content {
     }
 
     .about-hero-badge svg {
-      stroke: var(--color-accent-light);
+      stroke: var(--accent-color-light);
     }
 
     .about-mini-card {
-      background: var(--color-white);
+      background: var(--white-color);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-lg);
       padding: 1.5rem 1.5rem 1.6rem;
@@ -3483,7 +3483,7 @@ svg:hover .text-content {
     .about-mini-card h3 {
       font-family: var(--font-heading);
       font-size: 1.05rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       margin: 0 0 2px;
     }
 
@@ -3509,7 +3509,7 @@ svg:hover .text-content {
     }
 
     .about-mini-card .stars svg {
-      fill: var(--color-accent);
+      fill: var(--accent-color);
     }
 
     /* =========================================================
@@ -3571,13 +3571,13 @@ svg:hover .text-content {
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: clamp(1.8rem, 3vw, 2.4rem);
-      color: var(--color-white);
+      color: var(--white-color);
       line-height: 1;
       margin-bottom: 0.6rem;
     }
 
     .stat-item strong span.suffix {
-      color: var(--color-accent-light);
+      color: var(--accent-color-light);
       font-size: 0.7em;
     }
 
@@ -3589,7 +3589,7 @@ svg:hover .text-content {
     }
 
     .stat-item svg {
-      stroke: var(--color-accent-light);
+      stroke: var(--accent-color-light);
       margin-bottom: 0.6rem;
     }
 
@@ -3603,7 +3603,7 @@ svg:hover .text-content {
     }
 
     .team-card {
-      background: var(--color-white);
+      background: var(--white-color);
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
@@ -3665,11 +3665,11 @@ svg:hover .text-content {
     }
 
     .team-card__social a:hover {
-      background: var(--color-accent);
+      background: var(--accent-color);
     }
 
     .team-card__social a svg {
-      stroke: var(--color-white);
+      stroke: var(--white-color);
       width: 14px;
       height: 14px;
     }
@@ -3682,7 +3682,7 @@ svg:hover .text-content {
     .team-card__body h3 {
       font-family: var(--font-heading);
       font-size: 1.05rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       margin: 0 0 3px;
     }
 
@@ -3690,7 +3690,7 @@ svg:hover .text-content {
       display: block;
       font-size: 0.78rem;
       font-weight: 600;
-      color: var(--color-accent-dark);
+      color: var(--accent-color-dark);
       margin-bottom: 8px;
     }
 
@@ -3729,13 +3729,13 @@ svg:hover .text-content {
     }
 
     .value-item__icon svg {
-      stroke: var(--color-accent-dark);
+      stroke: var(--accent-color-dark);
     }
 
     .value-item h4 {
       font-family: var(--font-heading);
       font-size: 0.95rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       margin: 0 0 3px;
     }
 

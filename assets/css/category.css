@@ -8,15 +8,15 @@
     }
 
     .topbar {
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .topbar__dropdown svg {
-      stroke: var(--color-primary);
+      stroke: var(--main-color);
     }
 
     .topbar__social svg {
-      stroke: var(--color-primary);
+      stroke: var(--main-color);
     }
 
     .topbar__social a {
@@ -26,237 +26,209 @@
     /* =========================================================
        End HEADER OVERRIDE — 
     ========================================================= */
-    /* =========================================================
-      start category card 
-    ========================================================= */
+    
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+.category-flip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
 
+.category-card {
+  display: block;
+  height: 320px;
+  text-decoration: none;
+  border-radius: 21px;
+  /*corner-shape: scoop;*/
+  overflow: hidden;
+}
 
-    .category-card {
-      position: relative;
-      display: block;
-      min-width: 100%;
-      height: 380px;
-      border-radius: 24px;
-      overflow: hidden;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: var(--shadow-md);
-      transition: box-shadow .45s ease, transform .45s ease;
-    }
+.category-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: box-shadow .4s ease, transform .4s ease;
+}
 
-    .category-card:hover {
-      box-shadow: 0 26px 55px rgba(6, 29, 53, .38);
-      transform: translateY(-6px);
-    }
+.category-card__inner::before {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  content: "";
+  z-index: 20;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  /*corner-shape: scoop;*/
+  border-radius: var(--radius-lg);
+}
 
-    /* Photo layer */
-    .category-card__img {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background-position: center;
-      background-size: cover;
-    }
+.category-card:hover .category-card__inner,
+.category-card:focus-visible .category-card__inner {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
 
-    .category-card__img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .8s ease;
-      transform: scale(1.3);
-    }
+/* ---------- Image ---------- */
+.category-card__inner>img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+  transform: perspective(0)rotateX(0)rotateY(0)scaleX(1)scaleY(1)translateY(0);
+  transform-origin: 70% !important;
+}
 
-    .category-card:hover .category-card__img img {
-      transform: scale(1);
-    }
+.category-card:hover .category-card__inner>img {
+  transform: scale(1) perspective(1000px)rotateX(.06deg)rotateY(0)scaleX(1.05)scaleY(1.05)translateY(0) !important;
 
-    /* Gradient scrim for legible text */
-    .category-card__img::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(358deg,
-          rgba(6, 29, 53, .95) 0%,
-          rgba(8, 40, 68, .72) 42%,
-          rgba(8, 40, 68, .32) 68%,
-          rgba(8, 40, 68, .08) 100%);
-      transition: background .45s ease;
-    }
+}
 
-    .category-card:hover .category-card__img::after {
-      background: linear-gradient(358deg,
-          rgba(6, 29, 53, .88) 0%,
-          rgba(8, 40, 68, .55) 48%,
-          rgba(8, 40, 68, .18) 75%,
-          rgba(8, 40, 68, .04) 100%);
-    }
+/* ---------- Overlay ---------- */
+.category-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(6, 29, 53, .94) 0%,
+      rgba(8, 40, 68, .55) 42%,
+      rgba(8, 40, 68, .15) 70%,
+      rgba(8, 40, 68, .05) 100%);
+  pointer-events: none;
+}
 
-    /* Inner gold frame — the "premium ticket" cue */
-    .category-card::before {
-      content: "";
-      position: absolute;
-      inset: 10px;
-      z-index: 3;
-      border: 1.5px solid rgba(227, 189, 104, .3);
-      border-radius: 17px;
-      pointer-events: none;
-      transition: inset .45s ease, border-color .45s ease;
-    }
+/* ---------- Count Badge ---------- */
+.category-card__count {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 999px;
+  background: rgba(8, 40, 68, .35);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  font-size: .74rem;
+  font-weight: 700;
+}
 
-    .category-card:hover::before {
-      inset: 14px;
-      border-color: var(--color-accent);
-    }
+.category-card__count svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--color-accent-light);
+  flex-shrink: 0;
+}
 
-    /* Tour-count pill, top right */
-    .category-card__count {
-      position: absolute;
-      top: 22px;
-      right: 22px;
-      z-index: 4;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255, 255, 255, .14);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, .32);
-      color: var(--color-white);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.76rem;
-      letter-spacing: .02em;
-      padding: 6px 14px;
-      border-radius: 999px;
-      transition: background .35s ease, border-color .35s ease;
-    }
+/* ---------- Content Box ---------- */
+.category-card__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 1.6rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-    .category-card:hover .category-card__count {
-      background: var(--gradient-accent);
-      border-color: transparent;
-      color: var(--color-white);
-    }
+.category-card__eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-accent-light);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
 
-    .category-card__count svg {
-      stroke: var(--color-accent-light);
-      flex-shrink: 0;
-      transition: stroke .35s ease;
-    }
+.category-card__content h3 {
+  margin: 0 0 .55rem;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
 
-    /* .category-card:hover .category-card__count svg {
-      stroke: var(--color-primary-dark);
-    } */
+.category-card__content p {
+  margin: 0 0 1.1rem;
+  color: rgba(255, 255, 255, .82);
+  font-size: .84rem;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
-    /* Bottom content panel */
-    .category-content {
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 24px;
-      z-index: 4;
-      color: var(--color-white);
-    }
+/* ---------- CTA ---------- */
+.category-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 7px 15px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-accent-dark);
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 700;
+  transition: gap .3s ease;
+}
 
-    .category-content__eyebrow {
-      display: block;
-      font-family: var(--font-body);
-      font-weight: 800;
-      font-size: 0.66rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--color-accent-light);
-      margin: 0 0 8px;
-    }
+.category-card__cta svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-primary-dark);
+  transition: transform .3s ease;
+}
 
-    .category-content h2 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.55rem;
-      line-height: 1.15;
-      font-weight: 700;
-      color: var(--color-white);
-      text-shadow: 0 0 black;
-    }
+.category-card:hover .category-card__cta {
+  gap: 11px;
+}
 
-    .category-desc {
-      font-size: 0.86rem;
-      color: rgba(255, 255, 255, .82);
-      line-height: 1.55;
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      margin-top: 0;
-      transition: max-height .5s cubic-bezier(.22, .7, .25, 1), opacity .4s ease, margin-top .4s ease;
-    }
+.category-card:hover .category-card__cta svg {
+  transform: translateX(3px);
+}
 
-    .category-card:hover .category-desc {
-      max-height: 90px;
-      opacity: 1;
-      margin-top: 10px;
-    }
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .category-flip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    .category-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px dashed rgba(255, 255, 255, .3);
-    }
+@media (max-width: 640px) {
+  .category-flip-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .tours-count {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.78rem;
-      letter-spacing: .02em;
-      color: rgba(255, 255, 255, .85);
-    }
+  .category-card {
+    height: 360px;
+  }
+}
 
-    .category-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--color-white);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 3px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
+@media (prefers-reduced-motion: reduce) {
 
-    .category-cta svg {
-      width: 30px;
-      height: 30px;
-      padding: 8px;
-      box-sizing: border-box;
-      border-radius: 50%;
-      background: var(--gradient-accent);
-      stroke: var(--color-white);
-      transition: transform .35s ease;
-    }
-
-    .category-card:hover .category-cta svg {
-      transform: rotate(-45deg);
-      background: transparent;
-      stroke: var(--color-white);
-      font-size: 16px;
-    }
-
-    .category-card:hover .category-cta {
-      background: rgba(255, 255, 255, .14);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, .32);
-      color: var(--color-white);
-      gap: 0;
-    }
-
-    /* =========================================================
-       start  category page— 
-    ========================================================= */
+  .category-card__inner,
+  .category-card__inner>img,
+  .category-card__cta,
+  .category-card__cta svg {
+    transition: none;
+  }
+}
 
     /*==========================================================
     start printer card tours section
@@ -424,7 +396,7 @@
       font-family: var(--font-heading);
       font-weight: 600;
       font-size: 1.15rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       margin: 0 0 0.35rem;
       line-height: 1.25;
     }
@@ -672,7 +644,7 @@
       font-family: var(--font-body);
       font-weight: 700;
       font-size: 0.92rem;
-      color: var(--color-primary-dark);
+      color: var(--main-color-dark);
       box-shadow: var(--shadow-md);
       transition: transform .25s ease, box-shadow .25s ease;
     }
@@ -686,7 +658,7 @@
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      background: var(--color-primary-dark);
+      background: var(--main-color-dark);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -752,7 +724,7 @@
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background: var(--color-primary);
+      background: var(--main-color);
     }
 
     .ticket-mockup__perf::before {
@@ -821,7 +793,7 @@
     }
 
     .breadcrumb a:hover {
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .breadcrumb svg {
@@ -833,7 +805,7 @@
     }
 
     .breadcrumb .current {
-      color: var(--color-primary);
+      color: var(--main-color);
       font-weight: 700;
     }
 
@@ -911,7 +883,7 @@
 
     .category-hero__score {
       background: rgba(201, 155, 61, .9);
-      color: var(--color-primary-dark);
+      color: var(--main-color-dark);
       font-weight: 800;
       font-size: 0.76rem;
       padding: 3px 9px;
@@ -1258,7 +1230,7 @@
     }
 
     .title-switch__all:hover {
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     /* Category page title selector */
@@ -1297,7 +1269,7 @@
 
     :is(.category-page, .subcategory-page) .title-switch__label {
       margin-bottom: 13px;
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     :is(.category-page, .subcategory-page) .title-switch__chip {
@@ -1353,7 +1325,7 @@
       font-family: var(--font-body);
       font-weight: 700;
       font-size: 0.84rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       cursor: pointer;
       transition: border-color .2s ease, background .2s ease;
     }
@@ -1363,7 +1335,7 @@
     }
 
     .filter-toggle-btn svg {
-      stroke: var(--color-primary);
+      stroke: var(--main-color);
     }
 
     .filter-toggle-btn__count {
@@ -1439,7 +1411,7 @@
     }
 
     .view-toggle__btn.active svg {
-      stroke: var(--color-primary);
+      stroke: var(--main-color);
     }
 
     /* =========================================================
@@ -1486,7 +1458,7 @@
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: 1rem;
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .tours-filter-reset {
@@ -1502,7 +1474,7 @@
     }
 
     .tours-filter-reset:hover {
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .filter-group {
@@ -1664,7 +1636,7 @@
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: 1.1rem;
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     .tour-list-card__stars {
@@ -1706,8 +1678,8 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      border: 1.5px solid var(--color-primary);
-      color: var(--color-primary);
+      border: 1.5px solid var(--main-color);
+      color: var(--main-color);
       background: var(--color-white);
       border-radius: 999px;
       padding: 8px 16px;
@@ -1719,7 +1691,7 @@
     }
 
     .tour-list-card__actions .btn-outline-sm:hover {
-      background: var(--color-primary);
+      background: var(--main-color);
       color: var(--color-white);
     }
 
@@ -1954,7 +1926,7 @@
       display: block;
       font-size: 0.82rem;
       font-weight: 700;
-      color: var(--color-primary);
+      color: var(--main-color);
       line-height: 1.3;
     }
 
@@ -1973,12 +1945,12 @@
       border-top: 1px solid var(--color-gray-100);
       font-size: 0.8rem;
       font-weight: 700;
-      color: var(--color-secondary);
+      color: var(--color-second);
       text-decoration: none;
     }
 
     .breadcrumb__dropdown-all:hover {
-      color: var(--color-primary);
+      color: var(--main-color);
     }
 
     /* =========================================================
@@ -2077,7 +2049,7 @@
     }
 
     .subcat-card__check svg {
-      stroke: var(--color-primary-dark);
+      stroke: var(--main-color-dark);
     }
 
     /* Sibling subcategories band at bottom of a subcategory page */
@@ -2122,7 +2094,7 @@
       display: block;
       font-family: var(--font-heading);
       font-size: 0.95rem;
-      color: var(--color-primary);
+      color: var(--main-color);
       margin-bottom: 3px;
     }
 

@@ -653,7 +653,7 @@
     <!-- HEADING -->
     <div class="tailor-heading reveal">
       <div class="tailor-eyebrow">
-        <picture><source media="(min-width: 769px)" srcset="assets/images/pryamids.svg" sizes="100vw" type="image/svg+xml" width="490" height="490"><img title="Tailor-made journey icon" src="assets/images/pryamids.svg" alt="Tailor-made journey icon" sizes="100vw" decoding="async" loading="lazy" fetchpriority="low" width="490" height="490"></picture>
+        <picture><source media="(min-width: 769px)" srcset="assets/images/svg/pryamids.svg" sizes="100vw" type="image/svg+xml" width="490" height="490"><img title="Tailor-made journey icon" src="assets/images/svg/pryamids.svg" alt="Tailor-made journey icon" sizes="100vw" decoding="async" loading="lazy" fetchpriority="low" width="490" height="490"></picture>
         <span class="eyebrow-line"></span>Design Your Journey
       </div>
       <h1 class="tailor-title">Egypt <span>Tailor-Made</span> Packages</h1>
@@ -1154,8 +1154,8 @@
 
           <div style="font-size:.75rem;color:var(--color-gray-500);line-height:1.6;text-align:center;">
             <i class="fa-solid fa-shield-halved"
-              style="color:var(--color-secondary-dark);margin-bottom:6px;font-size:1.2rem;display:block;"></i>
-            <strong style="color:var(--color-primary);">Free personalised quote</strong><br />
+              style="color:var(--color-second-dark);margin-bottom:6px;font-size:1.2rem;display:block;"></i>
+            <strong style="color:var(--main-color);">Free personalised quote</strong><br />
             No obligations. Our specialists respond within 24h.
           </div>
         </div>
@@ -1424,7 +1424,7 @@
         bar.innerHTML = '<span>No cities selected yet — choose below</span>';
       } else {
         const names = state.cities.map(c => c.charAt(0).toUpperCase() + c.slice(1).replace(/-/g, ' '));
-        bar.innerHTML = '<i class="fa-solid fa-location-dot" style="color:var(--color-primary);margin-right:6px;"></i>' + names.join(' · ');
+        bar.innerHTML = '<i class="fa-solid fa-location-dot" style="color:var(--main-color);margin-right:6px;"></i>' + names.join(' · ');
       }
     }
 
