@@ -461,7 +461,7 @@ p.three-line {
   margin-bottom: 10px;
 }
 
-.wrap {
+.container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -829,7 +829,7 @@ picture {
   start global responsive
 ======================================================*/
 @media (max-width: 767px) {
-  .wrap {
+  .container {
     padding: 0 0.7rem;
   }
 
