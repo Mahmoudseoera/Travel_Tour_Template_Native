@@ -754,7 +754,7 @@
       <button class="gallery-hero__main" id="galleryHeroMain" type="button" aria-label="Open gallery">
         <picture id="galleryHeroPicture">
           <img id="galleryHeroImg" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=1600&q=80"
-            alt="Nile River Cruise gallery" width="2200" height="1293" fetchpriority="high" decoding="async">
+            alt="Nile River Cruise gallery" title="Nile River Cruise gallery" width="2200" height="1293" fetchpriority="high" decoding="async">
         </picture>
 
         <span class="gallery-hero__zoom" aria-hidden="true">
@@ -774,7 +774,7 @@
 
       <div class="gallery-hero__rail">
         <button class="gallery-hero__rail-arrow gallery-hero__rail-arrow--up" type="button"
-          aria-label="Scroll thumbnails up">
+          aria-label="Previous gallery slide">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
             <path d="M6 15l6-6 6 6" />
           </svg>
@@ -785,7 +785,7 @@
           <!-- Slide 0: YouTube video — thumbnail auto-generated on load -->
           <button class="gallery-hero__thumb is-active" type="button" data-index="0" data-type="video"
             data-video-url="https://media.istockphoto.com/id/690141920/video/the-great-pyramid-with-camel-in-giza-egypt.mp4?s=mp4-640x640-is&k=20&c=0qpDMLt90Gfqvar53dyoqhyskl8l-PLqGW78X0-wfBI=">
-            <img data-auto-thumb src="" alt="Tour video" loading="lazy" width="120" height="120">
+            <img data-auto-thumb src="" alt="Tour video" title="Tour video" loading="lazy" width="120" height="120">
             <span class="gallery-hero__thumb-play" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
@@ -794,7 +794,7 @@
           </button>
           <button class="gallery-hero__thumb " type="button" data-index="0" data-type="video"
             data-video-url="https://www.youtube.com/watch?v=1_AaZaUvI6g">
-            <img data-auto-thumb src="" alt="Tour video" loading="lazy" width="120" height="120">
+            <img data-auto-thumb src="" alt="Tour video" title="Tour video" loading="lazy" width="120" height="120">
             <span class="gallery-hero__thumb-play" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
@@ -840,11 +840,12 @@
         </div>
 
         <button class="gallery-hero__rail-arrow gallery-hero__rail-arrow--down" type="button"
-          aria-label="Scroll thumbnails down">
+          aria-label="Next gallery slide">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
             <path d="M6 9l6 6 6-6" />
           </svg>
         </button>
+        <button class="gallery-hero__autoplay" id="galleryHeroAutoplay" type="button" aria-pressed="false">Pause</button>
       </div>
     </div>
 
@@ -902,7 +903,7 @@
       </button>
 
       <div class="gallery-hero__rail">
-        <button class="gallery-hero__rail-arrow gallery-hero__rail-arrow--up" type="button" aria-label="Scroll thumbnails up">
+        <button class="gallery-hero__rail-arrow gallery-hero__rail-arrow--up" type="button" aria-label="Previous gallery slide">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 15l6-6 6 6"/></svg>
         </button>
         <div class="gallery-hero__rail-track" id="galleryHeroTrack">
@@ -922,7 +923,7 @@
             </button>
           @endforeach
         </div>
-        <button class="gallery-hero__rail-arrow gallery-hero__rail-arrow--down" type="button" aria-label="Scroll thumbnails down">
+        <button class="gallery-hero__rail-arrow gallery-hero__rail-arrow--down" type="button" aria-label="Next gallery slide">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
         </button>
       </div>
@@ -2658,41 +2659,98 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* =====================================================================
-     Main image swap
-     ===================================================================== */
-  function setMain(button) {
-    const index = thumbs.indexOf(button);
-    currentIndex = index;
+  // Rotate the wheel in continuous steps so wraparound never spins backwards.
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const autoplayButton = document.getElementById('galleryHeroAutoplay');
+  let wheelPosition = currentIndex;
+  let autoplayTimer;
+  let userPaused = motionPreference.matches;
+  let hovered = false;
+  let lightboxOpen = false;
+  let inView = true;
+  let swapVersion = 0;
+  const fallbackPoster = mainImg.getAttribute('src');
 
-    const isVideo = button.dataset.type === 'video';
-    const thumbImg = button.querySelector('img');
-    const nextSrc = isVideo ? (thumbImg.currentSrc || thumbImg.src) : button.dataset.full;
-
-    if (nextSrc) {
-      mainImg.classList.add('is-swapping');
-      requestAnimationFrame(() => {
-        mainImg.src = nextSrc;
-        mainImg.classList.remove('is-swapping');
-      });
-    }
-
-    stage.classList.toggle('is-video-active', isVideo);
-    thumbs.forEach(t => t.classList.toggle('is-active', t === button));
+  function renderWheel() {
+    thumbs.forEach((thumb, index) => {
+      thumb.style.setProperty('--wheel-angle', `${(index - wheelPosition) * 360 / thumbs.length}deg`);
+      thumb.classList.toggle('is-active', index === currentIndex);
+      thumb.setAttribute('aria-current', String(index === currentIndex));
+      thumb.setAttribute('aria-label', `Show slide ${index + 1}: ${thumb.querySelector('img').alt}`);
+    });
   }
 
-  thumbs.forEach(t => t.addEventListener('click', () => setMain(t)));
+  function setMain(button) {
+    const index = thumbs.indexOf(button);
+    if (index < 0) return;
+    currentIndex = index;
+    const isVideo = button.dataset.type === 'video';
+    const thumbImg = button.querySelector('img');
+    const nextSrc = isVideo ? (thumbImg.getAttribute('src') || fallbackPoster) : button.dataset.full;
+    const version = ++swapVersion;
+    const preload = new Image();
+    preload.onload = () => {
+      if (version !== swapVersion) return;
+      mainImg.classList.add('is-swapping');
+      setTimeout(() => {
+        if (version !== swapVersion) return;
+        mainImg.src = nextSrc;
+        mainImg.alt = thumbImg.alt;
+        mainImg.title = thumbImg.title || thumbImg.alt;
+        stage.classList.toggle('is-video-active', isVideo);
+        mainImg.classList.remove('is-swapping');
+      }, motionPreference.matches ? 0 : 180);
+    };
+    preload.onerror = () => {
+      if (version !== swapVersion) return;
+      mainImg.classList.remove('is-swapping');
+      stage.classList.toggle('is-video-active', isVideo);
+    };
+    preload.src = nextSrc;
+    renderWheel();
+  }
 
+  function moveWheel(step) {
+    wheelPosition += step;
+    setMain(thumbs[((wheelPosition % thumbs.length) + thumbs.length) % thumbs.length]);
+  }
+
+  function syncAutoplay() {
+    clearInterval(autoplayTimer);
+    autoplayButton.textContent = userPaused ? 'Play' : 'Pause';
+    autoplayButton.setAttribute('aria-pressed', String(userPaused));
+    autoplayButton.setAttribute('aria-label', userPaused ? 'Play gallery slideshow' : 'Pause gallery slideshow');
+    if (userPaused || hovered || lightboxOpen || !inView || document.hidden || stage.contains(document.activeElement) || thumbs.length < 2) return;
+    autoplayTimer = setInterval(() => moveWheel(1), 4200);
+  }
+
+  thumbs.forEach((thumb, index) => thumb.addEventListener('click', () => {
+    let step = (index - currentIndex + thumbs.length) % thumbs.length;
+    if (step > thumbs.length / 2) step -= thumbs.length;
+    moveWheel(step);
+    syncAutoplay();
+  }));
+  upBtn.addEventListener('click', () => { moveWheel(-1); syncAutoplay(); });
+  downBtn.addEventListener('click', () => { moveWheel(1); syncAutoplay(); });
+  autoplayButton.addEventListener('click', () => { userPaused = !userPaused; syncAutoplay(); });
+  stage.addEventListener('mouseenter', () => { hovered = true; syncAutoplay(); });
+  stage.addEventListener('mouseleave', () => { hovered = false; syncAutoplay(); });
+  stage.addEventListener('focusin', syncAutoplay);
+  stage.addEventListener('focusout', () => setTimeout(syncAutoplay, 0));
+  document.addEventListener('visibilitychange', syncAutoplay);
+  motionPreference.addEventListener('change', () => { userPaused = motionPreference.matches; syncAutoplay(); });
+  new IntersectionObserver(entries => {
+    inView = entries[0].isIntersecting;
+    syncAutoplay();
+  }).observe(stage);
+  const gallerySource = document.getElementById('lightgallery');
+  gallerySource.addEventListener('lgBeforeOpen', () => { lightboxOpen = true; syncAutoplay(); });
+  gallerySource.addEventListener('lgAfterClose', () => { lightboxOpen = false; syncAutoplay(); });
   document.getElementById('galleryHeroMain').addEventListener('click', () => {
     if (window.lgInstance) window.lgInstance.openGallery(currentIndex);
   });
-
-  function scrollThumbnails(amount) {
-    const isMobile = window.matchMedia('(max-width: 900px)').matches;
-    track.scrollBy(isMobile ? { left: amount, behavior: 'smooth' } : { top: amount, behavior: 'smooth' });
-  }
-  upBtn.addEventListener('click', () => scrollThumbnails(-160));
-  downBtn.addEventListener('click', () => scrollThumbnails(160));
+  setMain(thumbs[currentIndex]);
+  syncAutoplay();
 
   /* =====================================================================
      Guess a video MIME type from the URL when possible.
