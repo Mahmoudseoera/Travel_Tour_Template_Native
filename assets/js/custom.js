@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
-  const toggleBtn = document.querySelector(".BrandName-faq-toggle-btn");
-  const ctaLink = document.querySelector(".BrandName-faq-cta-link");
+  const toggleBtn = document.querySelector(".Trippio-faq-toggle-btn");
+  const ctaLink = document.querySelector(".Trippio-faq-cta-link");
 
   if (!faqItems.length || !ctaLink) return;
 

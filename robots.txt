@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.BrandName.com/sitemap.xml
+Sitemap: https://www.Trippio.com/sitemap.xml

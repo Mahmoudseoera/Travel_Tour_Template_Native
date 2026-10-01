@@ -1826,7 +1826,7 @@
   color: var(--color-gray-700);
 } */
 
-.BrandName-faq-controls {
+.Trippio-faq-controls {
   display: flex;
   margin-top: 15px;
   width: 100%;
@@ -1834,7 +1834,7 @@
   padding: 0 0.5rem;
 }
 
-.BrandName-faq-toggle-btn {
+.Trippio-faq-toggle-btn {
   font-size: 14px;
   font-weight: 600;
   color: var(--accent-color-dark);
@@ -1845,13 +1845,13 @@
   background: transparent;
 }
 
-.BrandName-faq-a p {
+.Trippio-faq-a p {
   font-size: .875rem;
   color: var(--text-body);
   line-height: 1.75;
 }
 
-.BrandName-faq-cta-link {
+.Trippio-faq-cta-link {
   display: inline-flex;
   align-items: center;
   display: none;
@@ -1863,12 +1863,12 @@
   transition: color .2s, gap .2s;
 }
 
-.BrandName-faq-cta-link svg {
+.Trippio-faq-cta-link svg {
   width: 18px;
   height: 18px;
 }
 
-.BrandName-faq-cta-link:hover {
+.Trippio-faq-cta-link:hover {
   color: var(--accent-color);
   gap: .75rem;
 }
